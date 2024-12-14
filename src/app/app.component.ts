@@ -105,8 +105,8 @@ export class AppComponent {
         this.formGroup = new FormBuilder().group({
             birthDate: [dayjs().subtract(20, 'year').format('YYYY-MM-DD'), Validators.required],
             versicherungsdauer: [67, [Validators.required, Validators.min(18), Validators.max(67)]],
-            monatlicheRente: [67, [Validators.required, Validators.min(18), Validators.max(67)]],
-            zahlbeitrag: [67, [Validators.required, Validators.min(18), Validators.max(67)]],
+            monatlicheRente: [67, [Validators.required, Validators.min(18), Validators.max(2500)]],
+            zahlbeitrag: [67, [Validators.required, Validators.min(18), Validators.max(2500)]],
             profession: ['', Validators.required],
             smoker: ['0', Validators.required],
         });
